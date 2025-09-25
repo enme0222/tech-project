@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>籃球員個人首頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Noto+Sans+TC:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #0d0d0d;
+            color: #f0f0f0;
+            overflow-x: hidden;
+        }
+
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/0d0d0d/e0e0e0?text=Placeholder+Image');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .hero-title {
+            font-family: 'Oswald', sans-serif;
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 6rem;
+            }
+        }
+
+        .link-button {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .link-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1), 0 0 15px rgba(255, 255, 255, 0.5);
+        }
+
+        .link-button:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+    <!-- 英雄區 (Hero Section) -->
+    <header class="hero-bg">
+        <div class="hero-overlay">
+            <h1 class="hero-title text-yellow-400">你的名字</h1>
+            <p class="text-xl md:text-2xl mt-4 font-bold tracking-wider">位置 | 球隊/學校</p>
+            <p class="text-lg md:text-xl mt-2">身高: 180cm | 體重: 75kg</p>
+        </div>
+    </header>
+
+    <!-- 主內容區 -->
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        
+        <!-- 連結樹 (Linktree) 區 -->
+        <section class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8">我的連結</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <a href="https://github.com/你的用戶名" target="_blank" class="link-button bg-gray-800 p-6 rounded-xl flex items-center justify-center space-x-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.417 2.865 8.161 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.865-.013-1.7-2.782.604-3.369-1.341-3.369-1.341-.454-1.156-1.107-1.46-1.107-1.46-.907-.617.069-.605.069-.605 1.003.07 1.531 1.027 1.531 1.027.892 1.529 2.341 1.085 2.913.829.091-.645.351-1.085.636-1.332-2.22-.251-4.555-1.11-4.555-4.943 0-1.089.39-1.984 1.029-2.685-.103-.252-.446-1.27.098-2.656 0 0 .84-.27 2.75 1.023.799-.222 1.644-.333 2.486-.337.842.004 1.687.115 2.486.337 1.91-1.293 2.747-1.023 2.747-1.023.546 1.386.202 2.404.1 2.656.64.701 1.028 1.596 1.028 2.685 0 3.842-2.339 4.686-4.562 4.935.359.309.678.92.678 1.855 0 1.339-.012 2.418-.012 2.743 0 .267.18.579.688.483C19.139 20.17 22 16.425 22 12.017 22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xl font-bold">GitHub</span>
+                </a>
+                <a href="mailto:你的Email@example.com" class="link-button bg-gray-800 p-6 rounded-xl flex items-center justify-center space-x-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M1.5 8.67v8.58L5.5 14l-4-5.33zm5.75-2.5L12 11.5l4.75-5.33-4-2.5L12 5zM17.5 8.67L21.5 14l-4 5.33-4-5.33zm-5.75 7.5l-4-2.5L7.5 12l4.75 5.33z"/>
+                    </svg>
+                    <span class="text-xl font-bold">Email</span>
+                </a>
+                <a href="https://linkedin.com/in/你的用戶名" target="_blank" class="link-button bg-gray-800 p-6 rounded-xl flex items-center justify-center space-x-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M18.337 3.5c-.244 0-.48-.008-.717-.008l-.134.004c-3.791.03-7.585.06-11.376.09-2.766-.011-5.184.97-6.845 3.397C-1.042 9.074.887 18.068 7.026 21.04c.15.076.326.113.5.112.556 0 1.112-.008 1.668-.008.204 0 .378-.07.5-.236.426-.525.852-1.05.748-1.742-.083-.55-.166-1.1-.25-1.65-.018-.12-.04-.24-.06-.36-.076-.452.12-.9.5-.96.34-.055.68-.05.99-.05.186 0 .37-.015.55-.015.776 0 1.552-.002 2.327-.004 3.737.052 7.15-2.26 8.35-6.262 1.31-4.35-.415-8.835-4.226-10.887zm-1.897 14.88c-.14.285-.3.57-.46.855-.262.535-.55.99-.89 1.43-.242.31-.5.62-.75.93-.42.54-.92 1.06-1.46 1.55-.63.57-1.32 1.06-2.07 1.45-.6.3-1.22.56-1.85.78-.175.05-.34.1-.5.14-.14-.02-.27-.05-.4-.08-1.01-.26-2.02-.55-3.03-.85-2.45-1.5-4.48-3.46-5.8-5.88-.84-1.52-1.2-3.14-1.2-4.83-.02-1.2.14-2.38.48-3.53.33-1.12.86-2.16 1.58-3.1.72-.94 1.59-1.76 2.59-2.47 1.01-.71 2.1-1.25 3.25-1.66 1.13-.4 2.3-.61 3.47-.63 1.18-.02 2.35.15 3.49.49 1.14.34 2.22.84 3.21 1.5 1.01.66 1.94 1.48 2.76 2.45.83.97 1.48 2.05 1.95 3.25.48 1.2.68 2.46.6 3.75-.08 1.28-.42 2.54-.99 3.72-.56 1.18-1.32 2.29-2.26 3.32-.96 1.03-2.02 1.96-3.2 2.76z"/>
+                    </svg>
+                    <span class="text-xl font-bold">LinkedIn</span>
+                </a>
+                <a href="https://instagram.com/你的用戶名" target="_blank" class="link-button bg-gray-800 p-6 rounded-xl flex items-center justify-center space-x-4 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <svg class="w-8 h-8 md:w-10 md:h-10 text-gray-300" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 2C8.42 2 5.5 4.92 5.5 8.5v7c0 3.58 2.92 6.5 6.5 6.5s6.5-2.92 6.5-6.5v-7c0-3.58-2.92-6.5-6.5-6.5zm0 1c3.04 0 5.5 2.46 5.5 5.5v7c0 3.04-2.46 5.5-5.5 5.5s-5.5-2.46-5.5-5.5v-7c0-3.04 2.46-5.5 5.5-5.5zm0 2.5c-2.485 0-4.5 2.015-4.5 4.5s2.015 4.5 4.5 4.5s4.5-2.015 4.5-4.5s-2.015-4.5-4.5-4.5zm0 1c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5s-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5zM17.5 4.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3z"/>
+                    </svg>
+                    <span class="text-xl font-bold">Instagram</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 關於我 (About Me) 區 -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-center">關於我</h2>
+            <p class="text-lg text-gray-300 text-center mx-auto max-w-2xl">
+                我是 [你的名字]，一位熱愛籃球的高中生球員。我的位置是 [你的位置，例如：後衛/中鋒]，擅長 [你的強項，例如：快速突破、三分球、防守]。籃球不僅是我的運動，更是我的生活哲學，教會我紀律與團隊合作。
+            </p>
+        </section>
+
+        <!-- 成就區 (Achievements) 區 -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">我的成就</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- 成就卡片 1 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">比賽成就</h3>
+                    <p class="text-gray-300">曾獲 [比賽名稱] [名次]，並榮獲 [個人獎項，例如：MVP]。</p>
+                </div>
+                <!-- 成就卡片 2 -->
+                <div class="bg-gray-800 p-6 rounded-xl shadow-lg transition-transform duration-300 hover:scale-105">
+                    <h3 class="text-xl font-bold text-yellow-400 mb-2">數據表現</h3>
+                    <p class="text-gray-300">場均 [你的場均得分]，[你的場均助攻]，[你的場均籃板]。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 影片區 (Videos) 區 -->
+        <section class="mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 text-center">比賽精華</h2>
+            <div class="relative overflow-hidden rounded-xl aspect-w-16 aspect-h-9" style="padding-top: 56.25%;">
+                <!-- 影片嵌入區，請替換為你的 YouTube/Vimeo 影片連結 -->
+                <iframe class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/你的影片ID"
+                    title="比賽精華"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- 頁尾 -->
+    <footer class="bg-gray-800 text-center py-6 mt-8">
+        <p class="text-sm text-gray-400">© 2024 你的名字. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JS for dynamic effects
+        // You can add more complex JS here for dynamic effects
+        // like changing colors or more advanced animations.
+        
+        // Example: change text color on hover (only for desktop)
+        const linkButtons = document.querySelectorAll('.link-button');
+        linkButtons.forEach(button => {
+            button.addEventListener('mouseenter', () => {
+                button.classList.remove('bg-gray-800');
+                button.classList.add('bg-yellow-600');
+            });
+            button.addEventListener('mouseleave', () => {
+                button.classList.remove('bg-yellow-600');
+                button.classList.add('bg-gray-800');
+            });
+        });
+
+    </script>
+</body>
+</html>
